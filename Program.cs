@@ -1,39 +1,22 @@
-﻿/*Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное
- из этих чисел.
+﻿/*Задача 6: Напишите программу, которая на вход принимает число и выдаёт,
+ является ли число чётным (делится ли оно на два без остатка).
 
-2, 3, 7 -> 7
-44 5 78 -> 78
-22 3 9 -> 22
+4 -> да
+-3 -> нет
+7 -> нет
 */
 
-Console.WriteLine("Введите число 1 ");
-string number1 = Console.ReadLine() ?? "";
+Console.WriteLine("Введите число");
+string number = Console.ReadLine() ?? "";
 
-Console.WriteLine("Введите число 2 ");
-string number2 = Console.ReadLine() ?? "";
+int n = Convert.ToInt32(number);
+int even = Convert.ToInt32(2);
+ if (n % 2 == 0)
 
-Console.WriteLine("Введите число 3 ");
-string number3 = Console.ReadLine() ?? "";
-
-int a = Convert.ToInt32(number1);
-int b = Convert.ToInt32(number2);
-int c = Convert.ToInt32(number3);
-
-int numbaerMax = a;
-
-if (a > b)
-{
-    if (a > c)
-    {
-        Console.WriteLine($"Максимальное число {a}");
-    }
-}
-else 
-    if (b > c)
-{
-    Console.WriteLine($"Максимальное число {b}");
-}
-else 
-{
-    Console.WriteLine($"Максимальное число {c}");
-}
+ {
+    Console.WriteLine($"Число {n} является четным");
+ }  
+ else 
+  {
+    Console.WriteLine($"Число {n} не является четным");
+  }  
